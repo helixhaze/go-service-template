@@ -1,0 +1,20 @@
+grpc:
+  port: {{grpc_port}}
+  check:
+    host: service-template
+http:
+  port: {{http_port}}
+  check:
+    host: service-template
+consul:
+  disabled: false
+  scheme: http
+  host: consul
+  port: 8500
+  dc: dc1
+  check:
+    interval: 10s
+apmserver:
+  name: elasticsearch-apm-server
+  tag: docker
+  dc: dc1
